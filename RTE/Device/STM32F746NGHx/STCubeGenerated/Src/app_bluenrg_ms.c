@@ -28,7 +28,7 @@
 
 #include "compiler.h"
 #include "bluenrg_utils.h"
-#include "stcubegenerated.h"
+//#include "stcubegenerated.h"
 #include "bluenrg_gap.h"
 #include "bluenrg_gap_aci.h"
 #include "bluenrg_gatt_aci.h"
@@ -114,7 +114,7 @@ void MX_BlueNRG_MS_Init(void)
   User_Init();
 
   /* Get the User Button initial state */
-  user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
+  //user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
 
   hci_init(user_notify, NULL);
 
@@ -235,10 +235,10 @@ void MX_BlueNRG_MS_Process(void)
  */
 static void User_Init(void)
 {
-  BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
-  BSP_LED_Init(LED2);
+  //BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
+  //BSP_LED_Init(LED2);
 
-  BSP_COM_Init(COM1);
+  //BSP_COM_Init(COM1);
 }
 
 /**
@@ -273,7 +273,7 @@ static void User_Process(void)
     /* Debouncing */
     HAL_Delay(50);
 #endif
-    BSP_LED_Toggle(LED2);
+    //BSP_LED_Toggle(LED2);
 
     if (connected)
     {
@@ -384,7 +384,7 @@ static void Reset_Motion_Values(void)
   * @param  Button Specifies the pin connected EXTI line
   * @retval None.
   */
-void BSP_PB_Callback(Button_TypeDef Button)
+void BSP_PB_Callback(/*Button_TypeDef Button*/)
 {
   /* Set the User Button flag */
   user_button_pressed = 1;
