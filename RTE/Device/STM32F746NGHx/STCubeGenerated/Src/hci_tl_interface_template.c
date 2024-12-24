@@ -226,12 +226,10 @@ void hci_tl_lowlevel_isr(void)
 {
   /* USER CODE BEGIN hci_tl_lowlevel_isr */
   /* Call hci_notify_asynch_evt() */
-  while(IsDataAvailable())
-  {
-    if (hci_notify_asynch_evt(NULL))
-    {
-      return;
-    }
+	while(IsDataAvailable())
+	{
+	  if (hci_notify_asynch_evt(NULL))
+			return;
   }
 
   /* USER CODE END hci_tl_lowlevel_isr */

@@ -21,13 +21,14 @@ int Init_BluetoothThread (void) {
  
 void BluetoothThread (void *argument) {
 	
-	//MX_BlueNRG_MS_Init();
 	printf("Init in bluetooth thread\n");
+	MX_BlueNRG_MS_Init();
  
   while (1) {
     ; // Insert thread code here...
-		printf("Process in bluetooth thread\n");
-		osDelay(2000);
+		//printf("Process in bluetooth thread\n");
+		MX_BlueNRG_MS_Process();
+		//osDelay(2000);
     osThreadYield();                            // suspend thread
   }
 }

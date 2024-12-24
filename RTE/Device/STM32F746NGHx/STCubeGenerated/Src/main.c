@@ -597,6 +597,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(IRQ_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
