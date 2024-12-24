@@ -19,7 +19,7 @@
 */
 
 // USER START (Optionally insert additional includes)
-#include "Board_LED.h"                  // ::Board Support:LED
+//#include "Board_LED.h"                  // ::Board Support:LED
 // USER END
 
 #include "DIALOG.h"
@@ -107,9 +107,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
         // USER START (Optionally insert code for reacting on notification message)
         hItem = WM_GetDialogItem(pMsg->hWin, ID_CHECKBOX_0);
         if(CHECKBOX_IsChecked(hItem)) {
-          LED_On(0);
+          //LED_On(0);
         } else {
-          LED_Off(0);
+          //LED_Off(0);
         }
         // USER END
         break;

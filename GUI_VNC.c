@@ -55,7 +55,7 @@ __NO_RETURN void app_main (void *argument) {
 
   (void)argument;
 
-  LED_Initialize();
+  //LED_Initialize();
   netInitialize();
 
   Init_GUIThread();
