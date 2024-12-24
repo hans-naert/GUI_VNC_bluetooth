@@ -52,14 +52,25 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+void MX_ETH_Init(void);
+void MX_LTDC_Init(void);
 
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-void   MX_ETH_Init(void);
-void   MX_LTDC_Init(void);
+#define EXT_LED8_Pin GPIO_PIN_15
+#define EXT_LED8_GPIO_Port GPIOA
+#define RST_Pin GPIO_PIN_3
+#define RST_GPIO_Port GPIOI
+#define EXT_LED7_Pin GPIO_PIN_8
+#define EXT_LED7_GPIO_Port GPIOA
+#define CSN_Pin GPIO_PIN_10
+#define CSN_GPIO_Port GPIOF
+#define IRQ_Pin GPIO_PIN_0
+#define IRQ_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 extern void app_main (void *arg);
 
