@@ -37,7 +37,7 @@
 #include "stm32f7xx_hal_tim.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
 /* USER CODE END Includes */
 
 /* Private defines -----------------------------------------------------------*/
@@ -274,6 +274,7 @@ static void User_Process(void)
     HAL_Delay(50);
 #endif
     //BSP_LED_Toggle(LED2);
+	  HAL_GPIO_TogglePin(EXT_LED8_GPIO_Port,EXT_LED8_Pin);
 
     if (connected)
     {
@@ -386,6 +387,7 @@ static void Reset_Motion_Values(void)
   */
 void BSP_PB_Callback(/*Button_TypeDef Button*/)
 {
+	HAL_GPIO_TogglePin(EXT_LED7_GPIO_Port,EXT_LED7_Pin);
   /* Set the User Button flag */
   user_button_pressed = 1;
 }
