@@ -781,7 +781,7 @@
 #define MX_PA15_GPIOx                           GPIOA
 #define MX_PA15_PinState                        GPIO_PIN_RESET
 #define MX_PA15_GPIO_PuPd                       GPIO_NOPULL
-#define MX_EXT_LED8                             PA15
+#define MX_EXT_LED7                             PA15
 #define MX_PA15_GPIO_Pin                        GPIO_PIN_15
 #define MX_PA15_GPIO_ModeDefaultOutputPP        GPIO_MODE_OUTPUT_PP
 
@@ -809,7 +809,7 @@
 #define MX_PA8_GPIOx                            GPIOA
 #define MX_PA8_PinState                         GPIO_PIN_RESET
 #define MX_PA8_GPIO_PuPd                        GPIO_NOPULL
-#define MX_EXT_LED7                             PA8
+#define MX_EXT_LED8                             PA8
 #define MX_PA8_GPIO_Pin                         GPIO_PIN_8
 #define MX_PA8_GPIO_ModeDefaultOutputPP         GPIO_MODE_OUTPUT_PP
 

@@ -60,15 +60,15 @@ void MX_LTDC_Init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define EXT_LED8_Pin GPIO_PIN_15
-#define EXT_LED8_GPIO_Port GPIOA
+#define EXT_LED7_Pin GPIO_PIN_15
+#define EXT_LED7_GPIO_Port GPIOA
 #define RST_Pin GPIO_PIN_3
 #define RST_GPIO_Port GPIOI
 #define PUSH_BUTTON_Pin GPIO_PIN_11
 #define PUSH_BUTTON_GPIO_Port GPIOI
 #define PUSH_BUTTON_EXTI_IRQn EXTI15_10_IRQn
-#define EXT_LED7_Pin GPIO_PIN_8
-#define EXT_LED7_GPIO_Port GPIOA
+#define EXT_LED8_Pin GPIO_PIN_8
+#define EXT_LED8_GPIO_Port GPIOA
 #define CSN_Pin GPIO_PIN_10
 #define CSN_GPIO_Port GPIOF
 #define IRQ_Pin GPIO_PIN_0
