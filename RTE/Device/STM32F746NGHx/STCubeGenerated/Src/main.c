@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -168,6 +168,8 @@ int main(void)
   MX_DMA2D_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+	HAL_GPIO_TogglePin(EXT_LED7_GPIO_Port,EXT_LED7_Pin);
+	printf("Hello Vives!\n");
 
   /* Initialize CMSIS-RTOS2 */
   osKernelInitialize ();
@@ -189,7 +191,6 @@ int main(void)
 
   //MX_BlueNRG_MS_Process();
     /* USER CODE BEGIN 3 */
-
   }
   /* USER CODE END 3 */
 }

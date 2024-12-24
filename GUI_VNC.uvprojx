@@ -419,6 +419,11 @@
               <FileType>1</FileType>
               <FilePath>.\RTE\Device\STM32F746NGHx\STCubeGenerated\Src\hci_tl_interface_template.c</FilePath>
             </File>
+            <File>
+              <FileName>stdout_user.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stdout_user.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -519,6 +524,9 @@
         </Group>
         <Group>
           <GroupName>::CMSIS Driver</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS-View</GroupName>
@@ -950,6 +958,11 @@
               <FileType>1</FileType>
               <FilePath>.\RTE\Device\STM32F746NGHx\STCubeGenerated\Src\hci_tl_interface_template.c</FilePath>
             </File>
+            <File>
+              <FileName>stdout_user.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stdout_user.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1050,6 +1063,9 @@
         </Group>
         <Group>
           <GroupName>::CMSIS Driver</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS-View</GroupName>
@@ -1193,6 +1209,13 @@
           <targetInfo name="Release"/>
         </targetInfos>
       </api>
+      <api Capiversion="1.1.0" Cclass="CMSIS-Compiler" Cgroup="STDOUT" condition="CortexDevice" exclusive="1">
+        <package name="CMSIS-Compiler" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
+        <targetInfos>
+          <targetInfo name="Debug"/>
+          <targetInfo name="Release"/>
+        </targetInfos>
+      </api>
       <api Capiversion="1.0.1" Cclass="CMSIS" Cgroup="OS Tick" exclusive="1">
         <package name="CMSIS" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="ARM" version="6.0.0"/>
         <targetInfos>
@@ -1216,6 +1239,20 @@
       </api>
     </apis>
     <components>
+      <component Cclass="CMSIS-Compiler" Cgroup="CORE" Cvendor="ARM" Cversion="1.1.0" condition="ARMCC CortexDevice">
+        <package name="CMSIS-Compiler" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
+        <targetInfos>
+          <targetInfo name="Debug"/>
+          <targetInfo name="Release"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="1.1.0" Cclass="CMSIS-Compiler" Cgroup="STDOUT" Csub="Custom" Cvendor="ARM" Cversion="1.1.0" condition="CORE" custom="1">
+        <package name="CMSIS-Compiler" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
+        <targetInfos>
+          <targetInfo name="Debug"/>
+          <targetInfo name="Release"/>
+        </targetInfos>
+      </component>
       <component Cclass="CMSIS-View" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="ARM" Cversion="1.6.0" condition="EventRecorder">
         <package name="CMSIS-View" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
