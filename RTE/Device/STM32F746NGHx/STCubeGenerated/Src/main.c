@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "string.h"
+#include "app_bluenrg_ms.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -186,6 +187,7 @@ int main(void)
 
     /* USER CODE END WHILE */
 
+  //MX_BlueNRG_MS_Process();
     /* USER CODE BEGIN 3 */
 
   }
