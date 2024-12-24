@@ -38,6 +38,8 @@
 #define RTE_DEVICE_HAL_DMA
 /* Keil::Device:STM32Cube HAL:ETH@1.3.0 */
 #define RTE_DEVICE_HAL_ETH
+/* Keil::Device:STM32Cube HAL:EXTI@1.3.0 */
+#define RTE_DEVICE_HAL_EXTI
 /* Keil::Device:STM32Cube HAL:GPIO@1.3.0 */
 #define RTE_DEVICE_HAL_GPIO
 /* Keil::Device:STM32Cube HAL:I2C@1.3.0 */
