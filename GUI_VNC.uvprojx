@@ -424,6 +424,11 @@
               <FileType>1</FileType>
               <FilePath>.\stdout_user.c</FilePath>
             </File>
+            <File>
+              <FileName>BluetoothThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BluetoothThread.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -962,6 +967,11 @@
               <FileName>stdout_user.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\stdout_user.c</FilePath>
+            </File>
+            <File>
+              <FileName>BluetoothThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BluetoothThread.c</FilePath>
             </File>
           </Files>
         </Group>

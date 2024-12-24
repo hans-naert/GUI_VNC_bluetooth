@@ -1,0 +1,33 @@
+#include "cmsis_os2.h"                          // CMSIS RTOS header file
+#include "app_bluenrg_ms.h" 
+#include <stdio.h>
+/*----------------------------------------------------------------------------
+ *      Thread 1 'Thread_Name': Sample thread
+ *---------------------------------------------------------------------------*/
+ 
+osThreadId_t tid_BluetoothThread;                        // thread id
+ 
+void BluetoothThread (void *argument);                   // thread function
+ 
+int Init_BluetoothThread (void) {
+ 
+  tid_BluetoothThread = osThreadNew(BluetoothThread, NULL, NULL);
+  if (tid_BluetoothThread == NULL) {
+    return(-1);
+  }
+ 
+  return(0);
+}
+ 
+void BluetoothThread (void *argument) {
+	
+	//MX_BlueNRG_MS_Init();
+	printf("Init in bluetooth thread\n");
+ 
+  while (1) {
+    ; // Insert thread code here...
+		printf("Process in bluetooth thread\n");
+		osDelay(2000);
+    osThreadYield();                            // suspend thread
+  }
+}

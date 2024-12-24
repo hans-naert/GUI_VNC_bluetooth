@@ -176,7 +176,6 @@ int main(void)
 
   /* Create application main thread */
   osThreadNew(app_main, NULL, &app_main_attr);
-
   /* Start thread execution */
   osKernelStart();
 

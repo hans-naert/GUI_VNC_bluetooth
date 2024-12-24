@@ -38,6 +38,7 @@
 #include "rl_net.h"                     // Keil.MDK-Pro::Network:CORE
 
 extern void Init_GUIThread(void);
+int Init_BluetoothThread (void);
 
 // Main stack size must be multiple of 8 Bytes
 #define APP_MAIN_STK_SZ (4096)
@@ -58,6 +59,8 @@ __NO_RETURN void app_main (void *argument) {
   netInitialize();
 
   Init_GUIThread();
+	Init_BluetoothThread();
+	
 
   osThreadExit();
 }
